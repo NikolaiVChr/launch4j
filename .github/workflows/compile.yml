@@ -15,16 +15,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Upload a preBuild Artifact
-      uses: actions/upload-artifact@v3.1.3
-      with:
-        name: Launch4Jpre
-        path: D:\a\launch4j\launch4j\**
-        if-no-files-found: error
     - name: Compile it
       shell: cmd
       run: ${{ '"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat" && msbuild' }}
-      working-directory: D:\a\launch4j\launch4j
+      working-directory: D:\a\launch4j\launch4j\.vscode
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.3
       with:

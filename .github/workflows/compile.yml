@@ -24,7 +24,7 @@ jobs:
     - name: Compile it
       shell: cmd
       run: ${{ '"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat" && msbuild' }}
-      working-directory: ..
+      working-directory: D:\a\launch4j\
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.3
       with:
